@@ -7,43 +7,55 @@
 
 body {
     font-family: Arial, sans-serif;
+    display: flex;
+    min-height: 100vh; /* Agar tinggi body menutupi seluruh layar */
 }
 
-/* Navbar */
-.navbar {
+/* Gaya Sidebar */
+.sidebar {
     background-color: #333;
     color: white;
+    width: 250px;
+    height: 100vh;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    padding: 15px 20px;
+    padding-top: 20px;
 }
 
-.navbar-logo {
+.sidebar-logo {
     font-size: 24px;
     font-weight: bold;
+    margin-bottom: 30px;
 }
 
-.navbar-links {
+.sidebar-link {
     list-style: none;
-    display: flex;
+    width: 100%;
+    padding-left: 0;
 }
 
-.navbar-links li {
-    margin-left: 20px;
+.sidebar-link li {
+    width: 100%;
 }
 
-.navbar-links a {
+.sidebar-link a {
     color: white;
     text-decoration: none;
     font-size: 18px;
+    padding: 15px 20px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.2s ease;
 }
 
-.navbar-links a:hover {
-    color: #ddd;
+.sidebar-link a:hover {
+    background-color: #575757;
 }
 
-/* Isi halaman */
+/* Gaya Konten Utama */
 .content {
-    padding: 30px;
+    flex-grow: 1;
+    padding: 20px;
 }
