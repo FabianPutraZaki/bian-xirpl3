@@ -1,27 +1,230 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horizontal Navbar</title>
-    <link rel="stylesheet" href="index.css">
+    <title>Portofolio Simpel</title>
+    <style>
+        /* RESET & VARIABEL SIMPEL */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            display: flex;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        /* VERTICAL NAVBAR */
+        .navbar {
+            width: 220px;
+            height: 100vh;
+            background-color: #1e293b;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 2rem 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .navbar h3 {
+            color: #fff;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .nav-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            padding: 0.6rem 1rem;
+            border-radius: 6px;
+            display: block;
+            transition: 0.2s;
+            font-size: 0.9rem;
+        }
+
+        .nav-links a:hover {
+            background-color: #2563eb;
+            color: #fff;
+        }
+
+        /* KONTEN UTAMA */
+        .main-content {
+            margin-left: 220px;
+            padding: 2rem;
+            width: calc(100% - 220px);
+            max-width: 800px;
+        }
+
+        section {
+            background: #fff;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+
+        h2 {
+            color: #1e293b;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            border-bottom: 2px solid #2563eb;
+            display: inline-block;
+            padding-bottom: 0.2rem;
+        }
+
+        p, li {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #475569;
+        }
+
+        ul {
+            padding-left: 1.2rem;
+        }
+
+        /* LIST & GRID SIMPEL */
+        .item {
+            margin-bottom: 1rem;
+        }
+
+        .item:last-child {
+            margin-bottom: 0;
+        }
+
+        .item h4 {
+            color: #0f172a;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            list-style: none;
+            padding: 0;
+        }
+
+        .skills-list li {
+            background: #eff6ff;
+            color: #2563eb;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+
+        /* RESPANSIF (MOBILE) */
+        @media (max-width: 600px) {
+            body {
+                flex-direction: column;
+            }
+
+            .navbar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                padding: 1rem;
+            }
+
+            .nav-links {
+                flex-direction: row;
+                justify-content: space-around;
+            }
+
+            .main-content {
+                margin-left: 0;
+                width: 100%;
+                padding: 1rem;
+            }
+        }
+    </style>
 </head>
-
 <body>
-<nav class="navbar">
-    <div class="navbar-logo">MyWebsite</div>
 
-    <ul class="navbar-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
-</nav>
+    <!-- VERTICAL NAVBAR -->
+    <nav class="navbar">
+        <h3>Portofolio Saya</h3>
+        <ul class="nav-links">
+            <li><a href="#profil">Profil</a></li>
+            <li><a href="#projek">Projek</a></li>
+            <li><a href="#lomba">Lomba</a></li>
+            <li><a href="#hardskill">Hardskill</a></li>
+            <li><a href="#softskill">Softskill</a></li>
+        </ul>
+    </nav>
 
-<div class="content">
-    <h1>Welcome to MyWebsite</h1>
-    <p>This is a simple horizontal navigation bar example.</p>
-</div>
+    <!-- KONTEN UTAMA -->
+    <main class="main-content">
+
+        <!-- 1. Biodata / Profil -->
+        <section id="profil">
+            <h2>Profil Pribadi</h2>
+            <p><strong>Nama:</strong> Fabian Putra Zaki</p>
+            <p><strong>Status:</strong> Pelajar </p>
+            <p><strong>Email:</strong> email@bianputraaa10.com</p>
+            <p style="margin-top: 0.5rem;">Saya adalah seorang pengembang web yang suka membuat antarmuka bersih dan mudah digunakan.</p>
+        </section>
+
+        <!-- 2. Pengalaman Projek -->
+        <section id="projek">
+            <h2>Pengalaman Projek</h2>
+            <div class="item">
+                <h4>1. Website Toko Online</h4>
+                <p>Membuat tampilan landing page toko online responsif menggunakan HTML dan CSS.</p>
+            </div>
+            <div class="item">
+                <h4>2. Aplikasi Catatan Harian</h4>
+                <p>Aplikasi web sederhana untuk mencatat agenda harian menggunakan JavaScript.</p>
+            </div>
+        </section>
+
+        <!-- 3. Pengalaman Lomba -->
+        <section id="lomba">
+            <h2>Pengalaman Lomba</h2>
+            <ul>
+                <li><strong>Juara 1 Web Design Competition (2026)</strong> - Mengembangkan website interaktif.</li>
+                <li><strong>Peserta Hackathon Nasional (2025)</strong> - Membuat ide solusi teknologi lingkungan.</li>
+            </ul>
+        </section>
+
+        <!-- 4. Hardskill -->
+        <section id="hardskill">
+            <h2>Kemampuan Hardskill</h2>
+            <ul class="skills-list">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>Git & GitHub</li>
+                <li>Figma</li>
+            </ul>
+        </section>
+
+        <!-- 5. Softskill -->
+        <section id="softskill">
+            <h2>Kemampuan Softskill</h2>
+            <ul>
+                <li>Komunikasi Efektif</li>
+                <li>Kerja Sama Tim</li>
+                <li>Problem Solving</li>
+                <li>Manajemen Waktu</li>
+            </ul>
+        </section>
+
+    </main>
+
 </body>
 </html>
